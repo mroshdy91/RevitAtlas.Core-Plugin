@@ -1,0 +1,17 @@
+{
+  "name": "atlas-core",
+  "version": "0.1.0-beta.3",
+  "description": "Shared Revit sessions, work identity, inspection, review, recovery and verified delivery.",
+  "author": {
+    "name": "ROSHDY"
+  },
+  "homepage": "https://github.com/mroshdy91/RevitAtlas.Core-Plugin",
+  "repository": "https://github.com/mroshdy91/RevitAtlas.Core-Plugin",
+  "license": "LicenseRef-Atlas-Free-Use",
+  "keywords": [
+    "revit",
+    "bim",
+    "core"
+  ],
+  "mcpServers": "./.mcp.json"
+}

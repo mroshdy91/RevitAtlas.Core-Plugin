@@ -68,3 +68,11 @@ The install receipt records the original selections for rollback. Uninstall rest
 those selections and retains models, credentials, work/evidence and immutable package
 folders. It does not silently purge user data. Updating compatible specialist plugins
 does not require installing another engine or broker.
+
+## Client compatibility
+
+Read the package's CLIENTS.md for this client's installation route and evidence level. Use the local Windows client on the same PC/account as Revit. Agent Plugins and non-Codex clients use the bundled stdio transport adapter; it connects only to the existing local broker, reads the provisioned Windows user credential automatically, and preserves explicit worker credentials. It does not install or launch another Revit engine. Codex's native HTTP configuration remains available. Reconnect MCP after setup; a client restart is needed for a stale inherited credential. No token copying or editing engine records.
+
+ATLAS_CONNECTION_UNAVAILABLE means the local broker is unreachable: perform Doctor/setup as authorized, open Revit and reconnect. After a lost mutation response, recover its operation identity; never replay blindly. ATLAS_AUTHENTICATION_FAILED does not authorize switching from a scoped credential to a broader one.
+
+A cloud/container-only agent cannot reach this Windows localhost service merely by installing a plugin. Use a supported local Windows MCP execution host; do not expose the broker publicly or create a tunnel as a workaround. Browser-only chat and marketplace listing approval are separate from local plugin compatibility.

@@ -1,12 +1,12 @@
 {
   "name": "atlas-core",
-  "version": "0.1.0-beta.1",
+  "version": "0.1.0-beta.3",
   "description": "Shared Revit sessions, work identity, inspection, review, recovery and verified delivery.",
   "author": {
     "name": "ROSHDY"
   },
   "skills": "./skills/",
-  "mcpServers": "./.mcp.json",
+  "mcpServers": "./mcp.codex.json",
   "interface": {
     "displayName": "Atlas Core",
     "shortDescription": "Shared Revit sessions, work identity, inspection, review, recovery and verified delivery.",

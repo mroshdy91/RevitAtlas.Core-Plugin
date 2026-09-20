@@ -2,11 +2,21 @@
 [CmdletBinding()]
 param(
     [ValidateSet('Doctor','Install')][string]$Action='Doctor',
-    [string]$DescriptorPath=(Join-Path (Split-Path $PSScriptRoot -Parent) 'runtime-release.json')
+    [string]$DescriptorPath
 )
 $ErrorActionPreference='Stop'
+if([string]::IsNullOrWhiteSpace($DescriptorPath)){
+    $DescriptorPath=Join-Path (Split-Path $PSScriptRoot -Parent) 'runtime-release.json'
+}
 
-function Get-AtlasHash([string]$Path) { (Get-FileHash -LiteralPath $Path -Algorithm SHA256).Hash.ToLowerInvariant() }
+function Get-AtlasHash([string]$Path) {
+    # Avoid script-module discovery differences when clients inherit another
+    # PowerShell version's module path. Hash the exact file bytes in both hosts.
+    $stream=[IO.File]::OpenRead($Path)
+    $algorithm=[Security.Cryptography.SHA256]::Create()
+    try { return ([BitConverter]::ToString($algorithm.ComputeHash($stream))).Replace('-','').ToLowerInvariant() }
+    finally { $algorithm.Dispose();$stream.Dispose() }
+}
 function Resolve-AtlasMember([string]$Root,[string]$Relative) {
     if(!$Relative -or $Relative -match '[\\:]|(^|/)\.\.?(/|$)' -or [IO.Path]::IsPathRooted($Relative)){throw 'ARCHIVE_PATH_INVALID'}
     $base=[IO.Path]::GetFullPath($Root).TrimEnd('\','/')+[IO.Path]::DirectorySeparatorChar

@@ -1,0 +1,35 @@
+{
+  "format_version": 1,
+  "runtime_included": false,
+  "public_runtime_ready": false,
+  "files": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "1c7405effba6706da749e9cb4ed960edd007daab9dbf360cc1b43ce0da1ee8ba"
+    },
+    {
+      "path": ".mcp.json",
+      "sha256": "d14f803e4513298b0c2eddbaa2cadcdcdaa56c49cb22d7223b71a439b27073b4"
+    },
+    {
+      "path": "compatibility.json",
+      "sha256": "b2ced9c4707b8cde6cf2ed5652487f61de273b874aa3ded7c4d00cc4882a1e7b"
+    },
+    {
+      "path": "README.md",
+      "sha256": "6a3e65b81a7dff51409b9376ea4ef6771c99c3e098efbd3861e93bc816b99fae"
+    },
+    {
+      "path": "RELEASE-READINESS.md",
+      "sha256": "66a7edc515fccdc580d9518e1c82b45db6fbe48290fa168f23833fe252db04b7"
+    },
+    {
+      "path": "skills/use-atlas-core/references/review-recovery.md",
+      "sha256": "8be81e6f570ce1ac02c853e82dfe73a0f99396a7a7af88f7e835cceee813ad80"
+    },
+    {
+      "path": "skills/use-atlas-core/SKILL.md",
+      "sha256": "5c6559a1c2ffc20c62d743997dfc59a53aefdbed6c104694d4fe6fc43759a6b8"
+    }
+  ]
+}

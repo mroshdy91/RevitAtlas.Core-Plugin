@@ -1,0 +1,5 @@
+{
+  "mcpServers": {
+    "atlas_core": { "type": "http", "url": "http://127.0.0.1:18765/core/mcp", "bearer_token_env_var": "ATLAS_BEARER_TOKEN" }
+  }
+}

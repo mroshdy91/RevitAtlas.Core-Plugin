@@ -1,0 +1,16 @@
+{
+  "format_version": 1,
+  "plugin": "atlas-core",
+  "version": "0.1.0-beta.1",
+  "repository": "mroshdy91/RevitAtlas.Core-Plugin",
+  "release_state": "draft",
+  "target_revit_versions": [
+    "2025",
+    "2026"
+  ],
+  "qualified_public_revit_versions": [],
+  "requires": [],
+  "runtime_included": false,
+  "public_runtime_ready": false,
+  "client_content_review_ready": true
+}

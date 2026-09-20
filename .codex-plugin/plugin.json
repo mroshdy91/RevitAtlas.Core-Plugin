@@ -1,0 +1,22 @@
+{
+  "name": "atlas-core",
+  "version": "0.1.0-beta.1",
+  "description": "Atlas Core client package. Public runtime release pending; requires a compatible shared Atlas Core runtime.",
+  "author": {
+    "name": "ROSHDY"
+  },
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Atlas Core",
+    "shortDescription": "Client preview; runtime release pending",
+    "longDescription": "Focused Revit tools and guidance using the shared Atlas Core runtime. This draft contains no runtime installer and does not establish public Revit version support.",
+    "developerName": "ROSHDY",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": "Check Atlas status and available capabilities before starting work."
+  }
+}

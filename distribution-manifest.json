@@ -1,11 +1,10 @@
 {
-  "format_version": 1,
-  "runtime_included": false,
-  "public_runtime_ready": false,
+  "publication_ready": true,
+  "version": "0.1.0-beta.1",
   "files": [
     {
       "path": ".codex-plugin/plugin.json",
-      "sha256": "1c7405effba6706da749e9cb4ed960edd007daab9dbf360cc1b43ce0da1ee8ba"
+      "sha256": "03c6b5bf9817423afdfbb06d7fb3bb0c162f5aa2d4e767aa91c43151df0e8093"
     },
     {
       "path": ".mcp.json",
@@ -13,15 +12,39 @@
     },
     {
       "path": "compatibility.json",
-      "sha256": "b2ced9c4707b8cde6cf2ed5652487f61de273b874aa3ded7c4d00cc4882a1e7b"
+      "sha256": "8db9f878fc041104dde05ef9dde515fa505ab0e776d893d1ca2d256a23766199"
+    },
+    {
+      "path": "FREE-USE-TERMS.txt",
+      "sha256": "628428c49adf5eddb111c65ba100e89f9e9a60a44aebe7c7060e25166bad76ad"
     },
     {
       "path": "README.md",
-      "sha256": "6a3e65b81a7dff51409b9376ea4ef6771c99c3e098efbd3861e93bc816b99fae"
+      "sha256": "b1258c78ed6bfb4b92aefc47d42ecc006ba9b81472fbcdb11deb2468c1ed2f8a"
     },
     {
       "path": "RELEASE-READINESS.md",
-      "sha256": "66a7edc515fccdc580d9518e1c82b45db6fbe48290fa168f23833fe252db04b7"
+      "sha256": "1b348d4836aa24beb385d356a761bb9b12920921b4311509c78a2a42eac51bf9"
+    },
+    {
+      "path": "runtime-release.json",
+      "sha256": "fa22547a5c42ebd9e28bfd20dde9b25b39f3b9bf02b2c499a7687eac6813e661"
+    },
+    {
+      "path": "RUNTIME.md",
+      "sha256": "066b46ea4c24bad0cfbf69c1d1167e65ae91538e0250491c29623352c92a1767"
+    },
+    {
+      "path": "scripts/atlas-setup.ps1",
+      "sha256": "613502eeae818a17bb92aa837533a071f8409b95bebe4705d0b8cac453e4c890"
+    },
+    {
+      "path": "skills/use-atlas-core/references/drawing-workflow.md",
+      "sha256": "dc70c339a10e42514f4e28c55ddfa7ff961199f6181d6271d3ce9b3c82219f70"
+    },
+    {
+      "path": "skills/use-atlas-core/references/installation.md",
+      "sha256": "3c873f1108974af52e793583b14b0347544b1503344e00f0a199d1e1c5e3790d"
     },
     {
       "path": "skills/use-atlas-core/references/review-recovery.md",
@@ -29,7 +52,7 @@
     },
     {
       "path": "skills/use-atlas-core/SKILL.md",
-      "sha256": "5c6559a1c2ffc20c62d743997dfc59a53aefdbed6c104694d4fe6fc43759a6b8"
+      "sha256": "ffb6c6c6f68c87c3eae6ba516d0fc85f1955db25af821b42b3de40288b5757d3"
     }
   ]
 }

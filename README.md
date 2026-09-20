@@ -1,21 +1,18 @@
-# RevitAtlas Core
+# Atlas Core
 
-Sessions, work identity, inspection, engineering intent, visual review, recovery and delivery. Core owns the shared broker and version-matched Revit engine.
+Shared Revit connection, work identity, inspection, review, recovery and delivery.
 
-**Release status: preparation only.** The first `v0.1.0-beta.1` release is a draft. This repository contains the client manifests and skills; no public runtime installer is available yet. Cloning it alone will not connect an AI client to Revit.
+**Public beta 0.1.0-beta.1 — Windows x64, Revit 2025 and 2026.** Free for personal and commercial use under [Free Use Terms](FREE-USE-TERMS.txt). Implementation source remains private.
 
-## Atlas marketplace
+## Install and start
 
-Atlas uses one shared runtime with focused plugins. [Atlas Core](https://github.com/mroshdy91/RevitAtlas.Core-Plugin) provides the common services; [Atlas Family](https://github.com/mroshdy91/RevitAtlas.Family-Plugin) adds family authoring. The existing [Atlas Marketplace](https://github.com/mroshdy91/Atlas-Marketplace) is the catalog. Sheets and Annotations are separate unreleased work and are not included here.
+1. Add [Atlas Marketplace](https://github.com/mroshdy91/Atlas-Marketplace) to your AI client.
+2. Install **atlas-core** and the specialists you need: **atlas-family**, **atlas-sheets**, **atlas-annotations**.
+3. Ask your agent: **Set up RevitAtlas and check its connection to Revit.**
+4. Save and close Revit if setup requests it. Restart your AI client once when requested, then open Revit.
 
-## Compatibility and connection
+The agent runs Core's packaged setup helper, verifies the public runtime download and configures the local connection. No private-repository access, development SDK or manual token entry is needed. Licensed Revit must already be installed. Marketplace installation supplies tools and guidance; Core's one-time Windows setup supplies the native integration.
 
-Revit 2025 and 2026 are release targets. Private 2025 workflows and focused 2026 checks exist, but they are not a claim of complete public two-version qualification. See [release readiness](RELEASE-READINESS.md).
+All four Revit plugins share **one broker and one version-matched engine per Revit process**. Specialists start no extra engine. Sheets and Annotations can work with existing project content without Family. HAPAtlas is a separate product.
 
-The MCP manifest connects to the local shared broker on `127.0.0.1:18765`. Authentication uses `ATLAS_BEARER_TOKEN`; this repository contains no token. Use only the local credential provisioned by your compatible Core installation. Never post credentials in an issue. Public installation instructions and runtime assets will accompany the qualified release; do not substitute private developer packages.
-
-## Contents and limitations
-
-The common skill loads detailed references as needed. Discover current capabilities before changing a model. A successful operation is separate from a verified complete engineering deliverable. Generic content is not manufacturer certification. System-family and in-place authoring are outside the Family product boundary.
-
-Implementation source, private test records, models, logs, credentials, compiled runtime and Autodesk libraries are excluded. Autodesk content must come from the user's licensed installation. Public visibility does not grant an open-source license; no license grant is added by this preparation.
+See [runtime setup](https://github.com/mroshdy91/RevitAtlas.Core-Plugin/blob/v0.1.0-beta.1/RUNTIME.md) and [supported scope and limitations](RELEASE-READINESS.md). The beta is not universal production qualification. Keep original models and review generated engineering outputs.

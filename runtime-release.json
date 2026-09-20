@@ -1,0 +1,15 @@
+{
+  "format_version": 1,
+  "product": "RevitAtlas",
+  "status": "published",
+  "version": "0.1.0-beta.1",
+  "release_page": "https://github.com/mroshdy91/RevitAtlas.Core-Plugin/releases/tag/v0.1.0-beta.1",
+  "asset_url": "https://github.com/mroshdy91/RevitAtlas.Core-Plugin/releases/download/v0.1.0-beta.1/RevitAtlas-Runtime-0.1.0-beta.1-win-x64.zip",
+  "asset_sha256": "2b67e2823dd82e5d36ea2b6ca60927aeec6e62a257dc9f728885a13fa0a95d2a",
+  "manifest_sha256": "05c410b452b29b4fd5f84f35753c3ba733ec3c83cc8eef92b95244c272cc0248",
+  "installer_sha256": "f1cd0d16c0c3be7d66fb0460619309d19e3b3ba6cdf58557a6679187ffce4bc3",
+  "target_revit_versions": [
+    "2025",
+    "2026"
+  ]
+}

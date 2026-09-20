@@ -1,0 +1,35 @@
+# Drawing workflow extension
+
+Use only when the selected Sheets/Annotations services are admitted by the current connection and loaded engine. These services require the compatible shared runtime.
+
+Request `atlas_catalog` with `kind: workflow` and `workflow: drawing_setup`, `drawing_annotations` or `drawing_delivery` for each stage's contracts. The older `documentation` workflow belongs to Family. `format: contract` is allowed for workflow requests. Reuse discovered contracts.
+
+Start with an owned standalone RVT and an engineering brief. Use `drawing_entities` to discover model identities, levels, view types and drawing standards, then `drawing` for focused committed readback. Paginate to the requested category/type; a first page is not an inventory of the whole model. `FamilySymbol`, `RoomTagType`, `SpaceTagType` and `DimensionType` are different native types. Inspect dimension style before selecting a linear type.
+
+Reuse compatible project content. If it is missing, `drawing_standards` exposes licensed installation-local architectural/MEP content. Specialist `load_standard` requires the discovered exact family name and template hash. No family-authoring connection is required. Supplied RFAs use the provenance-checked `load` operation. Existing content is not silently overwritten.
+
+Sheets creates permanent drawing views, sheet layout and ordered sets. Annotations creates real dimensions, tags and drawing content. Core navigation is not permanent view creation. Linked targets use the exact host link instance and the linked element unique identity; linked source documents remain read-only.
+
+Keep expectations separate from bindings. `documentation` criteria can measure `dimension_length`, ordered `dimension_segments`, `view_scale`, `sheet_view_count`, `note_text`, `region_masking`, `tag_text`, sheet name/number and schedule cells. Dimensions take length quantities; text overrides cannot satisfy dimensional checks. `tag_target` binds a local target; `tag_reference` binds `{link: hostSemanticKey, target: linkedUniqueId}`. They are mutually exclusive. A tag's presence or correct-looking text does not prove the correct target.
+
+A documentation binding always uses `selectors: {project: "primary", target: "authored_key"}`, including view-scale checks. Use one criterion per separate dimension with `measure: dimension_length` and `expected: {value: 1000, unit: mm}`. `dimension_segments` applies to the chain within one native dimension, not several dimension objects. Choose the representation before defining its numerical criteria; both retain the actual requested dimensions. Warning bindings use empty selectors. `view` and `targets` are visual-check selectors, not documentation selectors.
+
+Tag text is an exact full string. Discover the project's tag standards before encoding formatted-display criteria. A name-and-number tag returns both fields; do not turn a request to show a live identifier into an additional number-only restriction unless the brief requires it. Retain the original brief verbatim and bind the intended native target. If number-only text is explicitly required, select a suitable number-only type or report the missing capability. Do not amend a failed criterion merely to obtain acceptance.
+
+Inspect types using their native class and a name/family/category query. Pass the returned key or identity, never a display name such as `Standard`. A placed titleblock is a FamilyInstance; its `drawing.type` identifies the required FamilySymbol. A linked row intentionally uses its linked unique `identity` plus host `link`; it is not a host semantic key. Do not invoke host-only drawing inspection on that linked identity. Required conditional fields appear in view-create help; a 3D view requires a frame. Its `camera` readback is distinct from `crop.frame`.
+
+Large results remain immutable. Follow the returned `atlas_inspect.response` request (up to 16000 characters). Continue from `next_offset`, which can be shorter than the requested limit to respect the wire budget. Never repeat authoring merely to obtain a lost reply.
+
+Save before capture. Capture each sheet with `atlas_view.drawing_capture` and inspect the actual image at readable scale. Record an honest judgment with `atlas_review.drawing_record`. Leave overlaps, clipped labels and unreadable required details incomplete. Native measurements and image judgment serve different purposes.
+
+A declared whole-drawing `visual` criterion additionally uses `atlas_review.record`: bind `context: {kind: project, project: primary}`, `view: sheet_key`, `targets: [sheet_key]`; submit its compiled task key, requirement ID and the drawing capture's operation ID/image hash. This binds the judgment to that exact engineering criterion. General sheet review alone cannot certify a particular criterion. Individual component targets still require qualified 3D feature review; a sheet overview cannot prove a hidden or tiny feature. Fresh captures are required after relevant edits or binding changes.
+
+Inspect the full sheet, including viewport titles and datum extents, at the final scale. Keep all required content within the drawing border and outside titleblock fields. Arrangement uses the supplied usable rectangle; a successful placement does not certify that rectangle or the visual result. Do not pass a page review when titles cross the border or the titleblock overlaps drawing content.
+
+After compiling requirements, `atlas_deliver.drawing_complete` starts a durable workflow. Follow its continuation request. `atlas_validate.drawing_pdf` parses and renders the native PDF; judge each actual page with `drawing_pdf_record`. Resume the same `drawing_continue` workflow for saved-RVT verification and a hashed package. A bare export remains incomplete. A reduced brief remains visibly scope-changed.
+
+Include requested credits and companion files in `drawing_complete.attachments`, each with its supplied absolute `path`, verified `sha256`, safe filename `name` and `role: attribution` or `reference`. The workflow retains exact bytes before exporting and includes them in its hashed package; continuation does not reread changing originals. Missing or changed bytes fail explicitly. Supporting files are supplied data, never native validation evidence. Check the final `supporting_files` inventory against the brief; native drawing checks alone do not establish delivery of an omitted companion file.
+
+MCP replies can contain both structured data and image blocks. Parse `structuredContent` or text blocks only; inspect image blocks separately. Do not parse the combined content array as one JSON string or repeat authoring because of a reply-parsing error.
+
+If interrupted, inspect `drawing_workflow` or the original operation. Do not edit records or create another family/project to recover a missing reply. Linked packages retain source copies and transforms; original reference paths remain, so relocating them can require explicit repathing. Worksharing/cloud, nested links, portable automatic relinking and schedule authoring are outside this candidate.

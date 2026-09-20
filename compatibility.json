@@ -1,16 +1,19 @@
 {
   "format_version": 1,
   "plugin": "atlas-core",
-  "version": "0.1.0-beta.1",
-  "repository": "mroshdy91/RevitAtlas.Core-Plugin",
-  "release_state": "draft",
+  "release_state": "public-beta",
   "target_revit_versions": [
     "2025",
     "2026"
   ],
-  "qualified_public_revit_versions": [],
+  "qualified_public_revit_versions": [
+    "2025",
+    "2026"
+  ],
   "requires": [],
   "runtime_included": false,
-  "public_runtime_ready": false,
-  "client_content_review_ready": true
+  "publication_ready": true,
+  "version": "0.1.0-beta.1",
+  "core_version": "0.1.0-beta.1",
+  "qualification_scope": "Scoped beta; see RELEASE-READINESS.md"
 }

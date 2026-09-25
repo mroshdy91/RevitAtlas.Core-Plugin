@@ -10,7 +10,9 @@
         "-File",
         "${CLAUDE_PLUGIN_ROOT}/scripts/atlas-mcp.ps1",
         "-Surface",
-        "core"
+        "core",
+        "-Interface",
+        "v2-candidate"
       ]
     }
   }

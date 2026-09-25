@@ -20,7 +20,7 @@ Inspect types using their native class and a name/family/category query. Pass th
 
 Large results remain immutable. Follow the returned `atlas_inspect.response` request (up to 16000 characters). Continue from `next_offset`, which can be shorter than the requested limit to respect the wire budget. Never repeat authoring merely to obtain a lost reply.
 
-Save before capture. Capture each sheet with `atlas_view.drawing_capture` and inspect the actual image at readable scale. Record an honest judgment with `atlas_review.drawing_record`. Leave overlaps, clipped labels and unreadable required details incomplete. Native measurements and image judgment serve different purposes.
+Save before capture. Capture each sheet with `atlas_review.drawing_capture` and inspect the actual image at readable scale. Record an honest judgment with `atlas_review.drawing_record`. Leave overlaps, clipped labels and unreadable required details incomplete. Native measurements and image judgment serve different purposes.
 
 A declared whole-drawing `visual` criterion additionally uses `atlas_review.record`: bind `context: {kind: project, project: primary}`, `view: sheet_key`, `targets: [sheet_key]`; submit its compiled task key, requirement ID and the drawing capture's operation ID/image hash. This binds the judgment to that exact engineering criterion. General sheet review alone cannot certify a particular criterion. Individual component targets still require qualified 3D feature review; a sheet overview cannot prove a hidden or tiny feature. Fresh captures are required after relevant edits or binding changes.
 
@@ -32,4 +32,4 @@ Include requested credits and companion files in `drawing_complete.attachments`,
 
 MCP replies can contain both structured data and image blocks. Parse `structuredContent` or text blocks only; inspect image blocks separately. Do not parse the combined content array as one JSON string or repeat authoring because of a reply-parsing error.
 
-If interrupted, inspect `drawing_workflow` or the original operation. Do not edit records or create another family/project to recover a missing reply. Linked packages retain source copies and transforms; original reference paths remain, so relocating them can require explicit repathing. Worksharing/cloud, nested links, portable automatic relinking and schedule authoring are outside this candidate.
+If interrupted, inspect `drawing_workflow` or the original operation. Do not edit records or create another family/project to recover a missing reply. Linked packages retain source copies and transforms; original reference paths remain, so relocating them can require explicit repathing. Worksharing/cloud, nested links, portable automatic relinking and schedule authoring are outside this release.

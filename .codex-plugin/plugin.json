@@ -1,16 +1,22 @@
 {
   "name": "atlas-core",
-  "version": "0.1.0-beta.4",
+  "version": "2.0.0-alpha.1",
   "description": "Shared Revit sessions, work identity, inspection, review, recovery and verified delivery.",
   "author": {
     "name": "ROSHDY"
   },
   "skills": "./skills/",
-  "mcpServers": "./mcp.codex.json",
+  "mcpServers": {
+    "atlas_core": {
+      "type": "http",
+      "url": "http://127.0.0.1:18765/v2/core/mcp",
+      "bearer_token_env_var": "ATLAS_BEARER_TOKEN"
+    }
+  },
   "interface": {
     "displayName": "Atlas Core",
     "shortDescription": "Shared Revit sessions, work identity, inspection, review, recovery and verified delivery.",
-    "longDescription": "Shared Revit sessions, work identity, inspection, review, recovery and verified delivery. Scoped public beta for Revit 2025 and 2026; discover supported actions and limitations through Atlas Core.",
+    "longDescription": "Shared Revit sessions, work identity, inspection, review, recovery and verified delivery. Scoped public v2 alpha; see RELEASE-READINESS.md.",
     "developerName": "ROSHDY",
     "category": "Productivity",
     "capabilities": [

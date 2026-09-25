@@ -77,6 +77,7 @@ function Invoke-AtlasIndependentSetup([string]$Installer,[string]$Package,[strin
 function Invoke-AtlasSetup {
     $descriptor=Get-Content -LiteralPath $DescriptorPath -Raw|ConvertFrom-Json
     if($descriptor.format_version -ne 1 -or $descriptor.product -cne 'RevitAtlas'){throw 'SETUP_DESCRIPTOR_INVALID'}
+    if($Action -eq 'Doctor' -and $descriptor.status -eq 'published'){return (& (Join-Path $PSScriptRoot 'atlas-doctor.ps1')|ConvertFrom-Json)}
     $root=Join-Path $env:LOCALAPPDATA 'Atlas'
     $installed=Test-Path -LiteralPath (Join-Path $root 'broker-installation.json')
     $revit=@('2025','2026'|Where-Object {Test-Path -LiteralPath (Join-Path $env:ProgramFiles "Autodesk/Revit $_/Revit.exe")})

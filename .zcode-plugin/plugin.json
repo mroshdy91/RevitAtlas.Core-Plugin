@@ -1,6 +1,6 @@
 {
   "name": "atlas-core",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.0-alpha.2",
   "description": "Shared Revit sessions, work identity, inspection, review, recovery and verified delivery.",
   "author": {
     "name": "ROSHDY"
